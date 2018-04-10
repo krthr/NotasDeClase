@@ -26,5 +26,8 @@ $$a$$: Número de veces que se repite la división
 
 #### Tipos de Ecuaciones de Recurrencia de Dive and Conquer
 - Divide y vencerás
+$$T(n) = T(\frac{n}{b}) + cn^k$$
 - Acorta y vencerás
+$$T(n)= T(n - d) + cn^k$$
 - Recorta y serás vencido
+$$T(n) = aT(n - d) + cn^k$$
