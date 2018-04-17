@@ -31,3 +31,21 @@ $$T(n) = T(\frac{n}{b}) + cn^k$$
 $$T(n)= T(n - d) + cn^k$$
 - Recorta y serás vencido
 $$T(n) = aT(n - d) + cn^k$$
+
+
+    Func: DivideVenceras(x)
+        Si (x es suficientemente simple) Entonces
+            retornar solucionSimple(x)
+        SiNo
+            Descomponer x en x_1, ..., x_k
+            Para i = 1, k, i++
+                y_i = DivideVenceras(x)
+            FinPara
+            
+            retornar combinar(y_i), para obtener una sol y de x
+        FinSi
+        retornar y
+    Fin
+
+$$x_1, ..., x_k$$: Son los subprobelmas en los cuales se dividió el probl. principal, todos con las mismas caract.
+$$y_1, ..., y_k$$, Son las soluciones a los subproblemas obtenidos
